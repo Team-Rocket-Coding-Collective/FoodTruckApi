@@ -1,0 +1,10 @@
+[ignore]
+.*/__test__/.*
+.*bower\.json
+
+[include]
+./node_modules/
+
+[libs]
+
+[options]
