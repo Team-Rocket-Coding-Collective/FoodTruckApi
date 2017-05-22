@@ -1,10 +1,10 @@
 {
-  "name": "hapi-graphql-boilerplate",
+  "name": "food-truck-api",
   "version": "0.0.1",
-  "license": "MIT",
-  "description": "Hapi.js based Apollo GraphQL boilerplate",
+  "license": "TODO",
+  "description": "Our API for our foodtruck app",
   "bugs": {
-    "url": "https://github.com/mike866/hapi-graphql-boilerplate/issues"
+    "url": "https://github.com/Team-Rocket-Coding-Collective/FoodTruckApi/issues"
   },
   "main": "index.js",
   "scripts": {
@@ -16,12 +16,12 @@
     "flow": "node_modules/.bin/flow check",
     "lint": "eslint . --ext .js"
   },
-  "author": "Mike Chudziak (mike866)",
-  "homepage": "https://github.com/mike866/hapi-graphql-boilerplate#readme",
+  "author": "Syed Jafri",
+  "homepage": "https://github.com/Team-Rocket-Coding-Collective/FoodTruckApi#readme",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/mike866/hapi-graphql-boilerplate.git"
+    "url": "https://github.com/callstack-io/hapi-graphql-boilerplate.git"
   },
   "keywords": [
     "hapi",
