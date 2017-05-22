@@ -16,9 +16,9 @@ Glue.compose(manifest, { relativeTo: path.join(__dirname, '../') }, (err: Object
     const { info } = server;
 
     if (Array.isArray(info)) {
-      info.forEach(({ uri }, i) => console.log(`Server #${i} running on ${uri.toLowerCase()} 🙂 🚀`));
+      info.forEach(({ address, port }, i) => console.log(`Server #${i} running on ${address.toLowerCase()}:${port} 🙂 🚀`));
     } else {
-      console.log(`Server running on on ${info.uri.toLowerCase()} 🙂 🚀`);
+      console.log(`Server running on on ${info.address.toLowerCase()}:${info.port} 🙂 🚀`);
     }
   });
 });

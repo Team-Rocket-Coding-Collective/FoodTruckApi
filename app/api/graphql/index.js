@@ -32,10 +32,6 @@ export const setupGraphQL =
         apolloOptions: () => ({
           pretty: true,
           schema: executableSchema,
-          context: {
-            db,
-            loaders: getUserLoaders(db),
-          },
         }),
       },
     });

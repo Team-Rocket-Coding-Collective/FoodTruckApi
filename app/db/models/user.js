@@ -1,14 +1,13 @@
 /**
  * @flow
+ * TODO delete
  */
-import mongoose, { Schema } from 'mongoose';
 
-const userSchema: Schema = new Schema({
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-});
+// const userSchema: Schema = new Schema({
+//   email: {
+//     type: String,
+//     unique: true,
+//     required: true,
+//   },
+// });
 
-export default mongoose.model('User', userSchema);

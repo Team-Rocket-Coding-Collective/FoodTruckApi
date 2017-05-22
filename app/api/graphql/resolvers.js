@@ -1,25 +1,28 @@
 /**
  * @flow
+ * TODO connect postgres queries to here
  */
 
-import type { User, GraphQLContext } from '../../../internals/types';
+import type { User } from '../../../internals/types';
 
 const resolvers = {
   Query: {
-    getUserById(root: Object, { id }: { id: string }, context: GraphQLContext): User {
-      return context.loaders.userById.load(id);
+    getUserById(root: Object, { id }: { id: string }): User {
+      return { email: 'syedjafri99@gmail.com', id };
     },
 
-    getUserByEmail(root: Object, { email }: { email: string }, context: GraphQLContext): User {
-      return context.loaders.userByEmail.load(email);
+    getUserByEmail(root: Object, { email }: { email: string }): User {
+      return { email, id: '2' };
     },
   },
   Mutation: {
-    async createUser(root: Object, args: User, context: GraphQLContext): Promise<User> {
-      const user = new context.db.User(args);
-      await user.save();
+    async createUser(root: Object, args: User): Promise<User> {
+      // const user = new context.db.User(args);
+      // await user.save();
 
-      return user;
+      // return user;
+      console.log(root, args);
+      return { email: 'syedjafri99@gmail.com', id: '3' };
     },
   },
 };

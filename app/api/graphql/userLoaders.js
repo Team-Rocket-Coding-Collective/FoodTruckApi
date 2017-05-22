@@ -5,7 +5,7 @@
 import Dataloader from 'dataloader';
 
 const getDataLoader =
-  (fieldName: string, schema: Object): Function =>
+  (fieldName: string, schema: Object): any =>
     new Dataloader(async (ids: Array<string>): any => {
       const results = await schema.find({ [fieldName]: { $in: ids } });
       const resultMap = results.reduce((acc, r) => ({ ...acc, [r[fieldName]]: r }), {});

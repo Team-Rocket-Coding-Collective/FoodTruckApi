@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "npm run check && node internals/scripts/run.js",
+    "start": "npm run check || node internals/scripts/run.js",
     "start-dev": "npm run check && npm run watch",
     "watch": "nodemon internals/scripts/run.js",
     "check": "npm run lint && npm run flow",
@@ -47,8 +47,7 @@
     "graphql-tools": "^0.8.0",
     "hapi": "^16.1.0",
     "hapi-auth-basic": "^4.2.0",
-    "joi": "^10.1.0",
-    "mongoose": "^4.6.5"
+    "joi": "^10.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.0",

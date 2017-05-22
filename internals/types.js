@@ -56,8 +56,3 @@ export type User = {
   id: string,
   email: string,
 }
-
-export type GraphQLContext = {
-  loaders: Object,
-  db: Object,
-}

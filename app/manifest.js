@@ -11,7 +11,7 @@ const manifest: Manifest = {
     },
   },
   connections: [{
-    address: '0.0.0.0',
+    address: '127.0.0.1',
     labels: ['client'],
     port: +process.env.PORT || 1337,
     routes: {
@@ -38,14 +38,6 @@ const manifest: Manifest = {
       options: {
         routes: {
           prefix: '/v1/api',
-        },
-      },
-    },
-    {
-      plugin: {
-        register: './app/db',
-        options: {
-          uri: process.env.plugins_db_uri || 'mongodb://localhost:27017/testdatabase',
         },
       },
     },
