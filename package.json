@@ -62,7 +62,8 @@
     "eslint-plugin-react": "^6.5.0",
     "flow-bin": "^0.37.4",
     "jest-cli": "^18.1.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "pg-promise": "^5.7.1"
   },
   "babel": {
     "presets": [

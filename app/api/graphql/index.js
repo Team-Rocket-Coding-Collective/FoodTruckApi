@@ -7,7 +7,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 /* $FlowFixMe */
 import GraphQLSchema from './schema.graphql';
 import resolvers from './resolvers';
-import getUserLoaders from './userLoaders';
+// import getUserLoaders from './userLoaders';
 
 import type { Server } from '../../../internals/types';
 
@@ -32,6 +32,9 @@ export const setupGraphQL =
         apolloOptions: () => ({
           pretty: true,
           schema: executableSchema,
+          context: {
+            db,
+          },
         }),
       },
     });

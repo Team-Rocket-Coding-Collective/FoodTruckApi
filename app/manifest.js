@@ -42,6 +42,13 @@ const manifest: Manifest = {
       },
     },
     {
+      plugin: {
+        register: './app/api',
+        options: {
+        },
+      },
+    },
+    {
       plugin: 'hapi-auth-basic',
     },
   ],
