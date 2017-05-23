@@ -4,3 +4,5 @@ CREATE TABLE public.user (
     email text NOT NULL,
     date_added timestamp default NULL
 );;
+
+insert into public."user" (name, email) VALUES ('syed', 'jasfsa@gmail.com');;

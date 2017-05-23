@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "npm run check || node internals/scripts/run.js",
+    "start": "npm run check && node internals/scripts/run.js",
     "start-dev": "npm run check && npm run watch",
     "watch": "nodemon internals/scripts/run.js",
     "check": "npm run lint && npm run flow",

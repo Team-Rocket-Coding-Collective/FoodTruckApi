@@ -43,7 +43,7 @@ const manifest: Manifest = {
     },
     {
       plugin: {
-        register: './app/api',
+        register: './app/db',
         options: {
         },
       },

@@ -9,7 +9,7 @@ const pgp = require('pg-promise')();
 //   mongoose.Promise = global.Promise;
 // }
 
-export function register(server: Server, options: Object) {
+export function register(server: Server, options: Object, next: Function) {
   const cn: Object = {
     host: 'localhost',
     port: 5432,
@@ -21,13 +21,14 @@ export function register(server: Server, options: Object) {
 
   const db = pgp(cn);
   // TODO how do you make db available anyway?
-  server.expose('db3', db);
+  server.expose('db', db);
 
   // const queries: Object = require('./queries');  eslint-disable-line global-require
 
   // Object.keys(queries).forEach((query) => {
   //   server.expose(query, queries[query]);
   // });
+  db.connect().then(next);
 }
 
 register.attributes = {
